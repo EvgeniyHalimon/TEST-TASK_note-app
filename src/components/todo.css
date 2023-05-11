@@ -1,0 +1,116 @@
+.input{
+    min-width: 0px;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    position: relative;
+    appearance: none;
+    transition-property: border,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 0.2s;
+    font-size: 1rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    border: 2px solid;
+    border-color: inherit;
+    background: inherit;
+}
+
+.input:focus{
+    border-color: #646cff;
+}
+
+.addTodo{
+    display: grid;
+    place-content: flex-start;
+    gap: 0.5rem;
+}
+
+.todoItem{
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    border: 1px solid black;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    width: 50%;
+}
+
+.todoItem_fields{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.todoInput{
+    font-size: 1.25rem;
+    height: 2.5rem;
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.todoInput-body{
+    width: 100%;
+}
+
+.todoInput:is(:focus, :focus-within){
+    border: 2px solid;
+    border-color: #646cff;
+    border-radius: 0.4rem;
+}
+
+.todoItem_actions{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.todoItem_label{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.sortOptions{
+    display: flex;
+    gap: .3rem;
+}
+
+.sortOption{
+    border: 2px solid black;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: 300ms;
+}
+
+
+.sortOption:hover{
+    border-color: rgba(0, 0, 0, 0.45);
+}
+
+.icon{
+    transition: 300ms;
+    cursor: pointer;
+    height: 16px;
+}
+
+.icon:hover{
+    color:rgba(0, 0, 0, 0.65);
+}
+
+
+@media screen and (max-width:650px){
+    .todoItem{
+        display: block;
+        width: 85%;
+    }
+    
+    .todoItem_actions{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
